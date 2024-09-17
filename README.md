@@ -7,3 +7,5 @@ This is my first ever attempt in solving this [Challenge](https://roadmap.sh/pro
 **NOTE :** This current version of the project is not responsive, hopefully in the future I can introduce this aspect. For now, to enjoy the full experience, please view the website using your desktop browser.
 
 ## How to view the attempt :
+To have a view of the attempt, please follow this link below (I used github free website host)
+[Website](https://websiterdevelopper.github.io/Roadmap.sh-Testimonials-Cards/)
