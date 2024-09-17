@@ -1,0 +1,210 @@
+/* Variables */
+:root {
+  --main-color: #1e1e1e;
+  --radius: 16px;
+}
+
+/* Font */
+@font-face {
+  font-family: "Inter";
+  src: url("../font/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 500;
+}
+/* ============== Main  ============== */
+.grid {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "card1 card1 card1 card2 card2 card2"
+    "card3 card3 card3 card3 card3 card3"
+    "card4 card4 card4 card4 card4 card4";
+  gap: 15px;
+}
+
+.grid img.avatar {
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ======== Card 1 ======== */
+.grid .card-1 {
+  grid-area: card1;
+}
+
+.grid .card-1 .text {
+  position: relative;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.grid .card-1 .text::after {
+  content: "";
+  width: 0;
+  padding: 0;
+  border: 15px solid;
+  border-color: var(--main-color) transparent transparent transparent;
+  position: absolute;
+  left: 20px;
+  bottom: -25px;
+}
+
+.grid .card .person {
+  display: flex;
+  align-items: center;
+}
+
+.grid .card .person p {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.grid .card .person span {
+  font-size: 0.875rem;
+}
+
+/* ======== Card 2 ======== */
+
+.grid .card-2 {
+  grid-area: card2;
+  border: 3px solid var(--main-color);
+  border-radius: var(--radius);
+  padding: 15px 20px;
+}
+
+.grid .card-2 .text p {
+  margin-bottom: 20px;
+}
+
+.grid .card-3 {
+  grid-area: card3;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ======== Card 3 ======== */
+
+.grid .card-3 img {
+  width: 200px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  -o-object-fit: cover;
+  margin-right: 20px;
+}
+
+.grid .card-3 .person-details {
+  flex-basis: 80%;
+  background-color: var(--main-color);
+  padding: 15px;
+  border-radius: var(--radius);
+  color: white;
+}
+
+.grid .card-3 .person-details i {
+  color: gold;
+  margin-bottom: 16px;
+}
+
+.grid .card-3 .person-details h3 {
+  font-size: 1.5rem;
+}
+
+.grid .card-3 .person-details span {
+  color: rgb(255 255 255/ 0.5);
+  display: block;
+  margin: 10px 0 15px;
+}
+
+/* ======== Card 4 ======== */
+
+.grid .card-4 {
+  grid-area: card4;
+  border: 3px solid var(--main-color);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid .card-4 p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grid .card-4 p:first-child {
+  font-size: 1.125rem;
+}
+
+.grid .card-4 .person-slider {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 16px auto;
+  width: 60%;
+}
+
+.grid .card-4 .person-slider i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.grid .card-4 .person-slider i:first-child:hover {
+  transform: translateX(-10px);
+}
+
+.grid .card-4 .person-slider i:last-child:hover {
+  transform: translateX(10px);
+}
+
+.grid .card-4 .person-slider .images {
+  display: flex;
+  align-items: center;
+}
+
+.grid .card-4 img {
+  max-width: 60px;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.grid .card-4 img.faded {
+  max-width: 50px;
+  filter: opacity(0.5) blur(1px);
+}
+
+.grid .card-4 img.highlighted {
+  max-width: 70px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.grid .card-4 img.highlighted:hover {
+  transform: translateY(-10px) scale(1.1);
+}
